@@ -38,7 +38,7 @@ namespace SPV3
       private byte   _adapter;                                          /* physical monitor to run hce/spv3 on        */
       private bool   _borderless;                                       /* run hce/spv3 without window borders        */
       private bool   _borderlessEnabled;                                /* ability to toggle borderless               */
-      private bool   _cinematic = true;                                 /* toggle spv3 cinematic settings             */
+      private bool   _letterbox = true;                                 /* toggle spv3 letterbox settings             */
       private bool   _doom;                                             /* toggle spv3 doom mode                      */
       private bool   _eax;                                              /* toggle hw accel. & environmental sound     */
       private byte   _framerate = 60;                                   /* framerate to run spv3 at (in vsync mode)   */
@@ -213,13 +213,13 @@ namespace SPV3
         }
       }
 
-      public bool Cinematic
+      public bool Letterbox
       {
-        get => _cinematic;
+        get => _letterbox;
         set
         {
-          if (value == _cinematic) return;
-          _cinematic = value;
+          if (value == _letterbox) return;
+          _letterbox = value;
           OnPropertyChanged();
         }
       }
@@ -340,7 +340,7 @@ namespace SPV3
           {
             bw.Write(EAX);
             bw.Write(Preset);
-            bw.Write(Cinematic);
+            bw.Write(Letterbox);
             bw.Write(Elevated);
           }
 
@@ -395,7 +395,7 @@ namespace SPV3
           {
             EAX       = br.ReadBoolean();
             Preset    = br.ReadBoolean();
-            Cinematic = br.ReadBoolean();
+            Letterbox = br.ReadBoolean();
             Elevated  = br.ReadBoolean();
           }
 

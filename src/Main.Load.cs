@@ -83,7 +83,7 @@ namespace SPV3
         hxe.Video.Bless        = spv3.Borderless && spv3.Window && spv3.Preference == 1 && spv3.Elevated == false;
         hxe.Audio.Enhancements = spv3.EAX;
         hxe.Input.Override     = spv3.Preset;
-        hxe.Tweaks.Cinematic   = spv3.Cinematic;
+        hxe.Tweaks.Letterbox   = spv3.Letterbox;
         hxe.Tweaks.Unload      = !spv3.Shaders;
 
         if (chimera.Exists())

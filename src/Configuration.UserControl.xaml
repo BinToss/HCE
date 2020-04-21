@@ -446,8 +446,8 @@
                 <Separator Margin="0,15,0,10" Background="#FFC8C8C8" />
 
                 <DockPanel>
-                    <Label Content="Cinematic Bars:" />
-                    <CheckBox IsChecked="{Binding Loader.Cinematic}" />
+                    <Label Content="Cinematic Letterbox Bars:" />
+                    <CheckBox IsChecked="{Binding Loader.Letterbox}" />
                 </DockPanel>
             </StackPanel>
         </Grid>
